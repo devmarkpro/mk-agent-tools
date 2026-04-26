@@ -13,7 +13,7 @@ metadata:
     - code-review
     - devex
   author: devmarkpro
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # Mk Humanizer
@@ -148,6 +148,8 @@ Read from `${CLAUDE_SKILL_DIR}/references/`.
 | Diagram uses unknown tool syntax | Apply tool-agnostic principles only; don't guess at tool-specific fixes |
 | User disagrees with a rewrite | Revert that specific change, explain the pattern that triggered it |
 | Text mixes languages (e.g., English + code + YAML) | Apply patterns only to natural language sections |
+| User provides HTML or Markdown with embedded prose | Humanize the prose content, preserve all markup and structure |
+| Text contains AI-written but factually critical claims | Preserve the factual content, rewrite only the delivery style |
 
 ## Tools
 
@@ -187,6 +189,8 @@ Read from `${CLAUDE_SKILL_DIR}/references/`.
 9. Code blocks (non-diagram) are left completely untouched
 10. User receives the final text with a summary of changes
 11. When text is already natural, the skill says so rather than forcing changes
+12. Mixed content sections (prose + code + diagrams) are independently classified and treated with appropriate rules
+13. No false positives on formal-but-human technical language
 
 ## Reference Files
 

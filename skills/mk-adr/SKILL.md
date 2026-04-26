@@ -5,6 +5,11 @@ description: >
   Michael Nygard template. Proactively suggests ADR creation on architecture
   changes. Validates prose with mk-humanizer. Trigger when user mentions ADR,
   architecture decisions, or asks "why" about architecture choices.
+allowed-tools:
+  - Read
+  - Write
+  - Edit
+  - Bash
 metadata:
   tags:
     - docs
@@ -12,7 +17,7 @@ metadata:
     - planning
     - devex
   author: devmarkpro
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # Mk ADR
@@ -58,7 +63,9 @@ Read both reference files before any ADR operation.
 
 ---
 
-## Humanizer Validation Rule
+## Workflow
+
+### Humanizer Validation Rule
 
 **All ADR prose must be validated by mk-humanizer.** This applies to:
 - New ADRs: validate Context, Decision, and Consequences before finalizing
@@ -74,10 +81,6 @@ Read both reference files before any ADR operation.
    - Active voice in Decision section ("We will..." not "It was decided...")
    - No filler phrases, no em dash overuse, no rule-of-three padding
    - Consequences include real trade-offs, not generic optimism
-
----
-
-## Workflow
 
 ### Phase 1: Create a New ADR
 
@@ -204,7 +207,7 @@ Be specific, batch per ADR, prioritize by impact. Always frame as suggestions.
 **External (optional):**
 - `adr-tools` CLI — streamlines create, link, supersede operations
 
-**Skills:**
+**Agent (optional):**
 - mk-humanizer — validates ADR prose (required when available, graceful fallback when not)
 
 ## Examples
@@ -227,7 +230,7 @@ Be specific, batch per ADR, prioritize by impact. Always frame as suggestions.
 
 ### Proactive Suggestion Scenario
 
-```
+```text
 User: Let's replace the REST API with GraphQL for the new endpoints
 Agent: This is an architectural change worth documenting.
        Want me to create an ADR for the decision to adopt GraphQL?

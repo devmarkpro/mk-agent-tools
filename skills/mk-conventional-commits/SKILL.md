@@ -1,17 +1,16 @@
 ---
 name: mk-conventional-commits
 description: >
-  Write git commit messages following the Conventional Commits specification.
+  Writes git commit messages following the Conventional Commits specification.
   Guides type selection, scope choice, and description formatting for clean,
   parseable commit history. Trigger when writing any git commit message.
-disable-model-invocation: false
 metadata:
   tags:
     - git
     - swe
     - devex
   author: devmarkpro
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # Mk Conventional Commits
@@ -82,11 +81,7 @@ Scope is optional per the spec but recommended for clarity. When included, it's 
 **How to choose a scope:**
 - Use the module, package, or component name the change is in
 - Use the area of concern: `auth`, `api`, `config`, `db`, `cli`, `docs`
-- Be consistent — look at recent commits for established scope conventions:
-
-```
-git log --oneline -20 | grep -oP '\(\K[^)]+' | sort | uniq -c | sort -rn
-```
+- Be consistent — review recent commit messages to identify established scope conventions in the repository
 
 If a commit touches multiple areas, use the primary one. If genuinely cross-cutting, scope can be omitted.
 
@@ -165,7 +160,7 @@ If breaking, the body should explain what breaks and how to migrate.
 **Built-in:**
 - Bash — running git commands
 
-**Skills (optional):**
+**Agent (optional):**
 - mk-humanizer — validate description text for AI patterns
 
 ## Examples
@@ -250,6 +245,7 @@ we need to restore password-based login while it's resolved.
 7. Body (if present) is separated by a blank line and wrapped at 72 characters
 8. Footers follow the `<token>: <value>` format
 9. The message is parseable by standard conventional commit tooling
+10. The commit type is from the standard set — no invented types
 
 ## Tips
 
