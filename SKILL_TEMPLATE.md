@@ -1,5 +1,5 @@
 ---
-name: dmp-CHANGEME
+name: mk-CHANGEME
 description: CHANGEME — one-line summary of what this skill does
 metadata:
   tags:

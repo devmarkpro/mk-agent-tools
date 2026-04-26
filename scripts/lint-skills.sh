@@ -9,7 +9,7 @@ NC='\033[0m'
 ERRORS=0
 WARNINGS=0
 ALLOWED_TOP_FIELDS="name|description|license|compatibility|allowed-tools|metadata|argument-hint|disable-model-invocation|user-invocable|paths|context|agent|model|effort|hooks|shell"
-PREFIX="dmp-"
+PREFIX="mk-"
 
 lint_skill() {
   local file="$1"

@@ -1,5 +1,5 @@
 {
-  "name": "dmp-agent-skills",
+  "name": "mk-agent-skills",
   "owner": {
     "name": "devmarkpro",
     "url": "https://github.com/devmarkpro"
@@ -10,12 +10,12 @@
   },
   "plugins": [
     {
-      "name": "dmp-skills",
+      "name": "mk-skills",
       "description": "Agent skills by devmarkpro",
       "source": "./",
       "strict": false,
       "skills": [
-        "./skills/dmp-skill-creator"
+        "./skills/mk-skill-creator"
       ]
     }
   ]

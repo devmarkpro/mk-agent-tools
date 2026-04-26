@@ -1,5 +1,5 @@
 ---
-name: dmp-skill-creator
+name: mk-skill-creator
 description: >
   Dual-mode skill factory: creates new skills from natural language or audits
   existing skills against SKILL_SCHEMA v2.0. Session-aware — extracts context
@@ -32,11 +32,11 @@ The ROOT skill for skill authoring. Operates in two modes: **Create** (draft new
 ## When to Use This Skill
 
 **Trigger when:**
-- User says `/dmp-skill-creator`, "create a new skill", "build a skill", "scaffold a skill"
-- User says `/dmp-skill-creator create <description>`
+- User says `/mk-skill-creator`, "create a new skill", "build a skill", "scaffold a skill"
+- User says `/mk-skill-creator create <description>`
 - User describes automation and wants it packaged as a skill
 - After a work session, user says "make this a skill", "automate this process", "I want a skill for what we just did"
-- User says `/dmp-skill-creator review <name>`, "audit the X skill", "check if skill X follows the schema"
+- User says `/mk-skill-creator review <name>`, "audit the X skill", "check if skill X follows the schema"
 
 **Do NOT trigger when:**
 - User wants to make a small edit to an existing skill (edit directly with Read/Edit)
@@ -127,7 +127,7 @@ Determine how the skill request arrived:
 The user has been working in this session (files edited, tools run, multi-turn conversation) and now asks to turn that work into a skill. Signals: "automate this", "make this a skill", "skill for what we just did", or the request references work done earlier in conversation.
 
 **Scenario B — Clean start:**
-The user opened a fresh session or the request has no relationship to prior conversation. Signals: `/dmp-skill-creator create <description>`, or the request is self-contained.
+The user opened a fresh session or the request has no relationship to prior conversation. Signals: `/mk-skill-creator create <description>`, or the request is self-contained.
 
 **Detection:**
 1. Does the user's request reference prior conversation work? → Scenario A
@@ -446,14 +446,14 @@ If yes: apply fixes → re-validate → re-present report.
 ## Examples
 
 ### Triggering Prompts
-- `/dmp-skill-creator`
-- `/dmp-skill-creator create weekly email summarizer`
+- `/mk-skill-creator`
+- `/mk-skill-creator create weekly email summarizer`
 - `Create a new skill for weekly status reports`
 - `Build a skill that processes API responses into reports`
 - `I want a skill that generates meeting prep briefings from my calendar`
 - `Can we turn what we just did into a skill?`
 - `I want to automate this process as a skill`
-- `/dmp-skill-creator review my-skill-name`
+- `/mk-skill-creator review my-skill-name`
 - `Audit my data-pipeline skill`
 
 ### Non-Triggering Prompts

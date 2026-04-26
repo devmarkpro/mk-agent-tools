@@ -23,7 +23,7 @@ fi
 
 WARNINGS=0
 
-for skill_dir in skills/dmp-*/; do
+for skill_dir in skills/mk-*/; do
   [[ -d "$skill_dir" ]] || continue
   skill_file="${skill_dir}SKILL.md"
   [[ -f "$skill_file" ]] || continue

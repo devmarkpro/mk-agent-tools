@@ -5,7 +5,7 @@
 Each skill lives in its own directory under `skills/`:
 
 ```
-skills/dmp-my-skill/
+skills/mk-my-skill/
 ├── SKILL.md            # Required: main skill file (<500 lines)
 └── references/         # Optional: supporting documentation
     └── guide.md
@@ -17,7 +17,7 @@ skills/dmp-my-skill/
 
 ```yaml
 ---
-name: dmp-my-skill
+name: mk-my-skill
 description: Clear one-line summary (max 1024 chars)
 metadata:
   tags:
@@ -32,7 +32,7 @@ metadata:
 
 Only these top-level fields are permitted in frontmatter:
 
-- `name` — must match directory name, start with `dmp-`, max 64 chars
+- `name` — must match directory name, start with `mk-`, max 64 chars
 - `description` — non-empty, max 1024 chars
 - `metadata` — container for tags, author, version
 - `license` — optional license reference
@@ -69,7 +69,7 @@ CI enforces these checks (run locally with `./scripts/lint-skills.sh`):
 
 1. Frontmatter delimiters (`---`) present
 2. `name` and `description` non-empty
-3. `name` starts with `dmp-`, matches directory, max 64 chars
+3. `name` starts with `mk-`, matches directory, max 64 chars
 4. `description` max 1024 chars
 5. `metadata.tags` is a non-empty list
 6. `metadata.version` is valid semver (if present)
@@ -94,6 +94,6 @@ Add the skill path to `.claude-plugin/marketplace.json` under the `skills` array
 
 ```json
 "skills": [
-  "./skills/dmp-my-skill"
+  "./skills/mk-my-skill"
 ]
 ```
