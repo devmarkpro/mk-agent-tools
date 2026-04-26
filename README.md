@@ -56,6 +56,7 @@ ln -s ~/mk-agent-tools/skills/mk-<skill-name> ~/.claude/skills/mk-<skill-name>
 |-------|-------------|------|
 | [mk-skill-creator](skills/mk-skill-creator/) | Dual-mode skill factory: create new skills from natural language or audit existing skills against SKILL_SCHEMA v2.0 | `swe`, `tooling`, `devex`, `planning` |
 | [mk-humanizer](skills/mk-humanizer/) | Remove AI writing patterns from text with focus on technical writing and diagram-as-code | `writing`, `docs`, `code-review`, `devex` |
+| [mk-conventional-commits](skills/mk-conventional-commits/) | Write git commit messages following the Conventional Commits v1.0.0 spec | `git`, `swe`, `devex` |
 
 ## Creating a New Skill
 
