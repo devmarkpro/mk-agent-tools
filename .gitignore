@@ -1,0 +1,11 @@
+.DS_Store
+.env
+.env.*
+*.swp
+*.swo
+*~
+.claude/
+!.claude-plugin/
+node_modules/
+__pycache__/
+*.pyc

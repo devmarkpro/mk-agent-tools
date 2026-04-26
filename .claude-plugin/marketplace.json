@@ -1,0 +1,22 @@
+{
+  "name": "dmp-agent-skills",
+  "owner": {
+    "name": "devmarkpro",
+    "url": "https://github.com/devmarkpro"
+  },
+  "metadata": {
+    "description": "Personal Claude Code skills marketplace by devmarkpro",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "dmp-skills",
+      "description": "Agent skills by devmarkpro",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/dmp-skill-creator"
+      ]
+    }
+  ]
+}
