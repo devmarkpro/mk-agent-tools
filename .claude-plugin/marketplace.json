@@ -17,7 +17,8 @@
       "skills": [
         "./skills/mk-skill-creator",
         "./skills/mk-humanizer",
-        "./skills/mk-conventional-commits"
+        "./skills/mk-conventional-commits",
+        "./skills/mk-adr"
       ]
     }
   ]
