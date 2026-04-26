@@ -1,6 +1,11 @@
 name: Lint Skills
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'skills/**'
+      - 'scripts/lint-skills.sh'
   pull_request:
     paths:
       - 'skills/**'
