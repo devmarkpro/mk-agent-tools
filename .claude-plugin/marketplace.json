@@ -15,7 +15,8 @@
       "source": "./",
       "strict": false,
       "skills": [
-        "./skills/mk-skill-creator"
+        "./skills/mk-skill-creator",
+        "./skills/mk-humanizer"
       ]
     }
   ]
