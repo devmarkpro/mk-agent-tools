@@ -5,7 +5,6 @@ description: >
   and diagram-as-code. Detects content type, applies pattern-specific rewrites,
   and calibrates voice for the doc type. Trigger when user asks to humanize,
   clean up, or rewrite text to sound less AI-generated.
-disable-model-invocation: true
 metadata:
   tags:
     - writing
@@ -13,7 +12,7 @@ metadata:
     - code-review
     - devex
   author: devmarkpro
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # Mk Humanizer
